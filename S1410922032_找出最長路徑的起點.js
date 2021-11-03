@@ -3,7 +3,6 @@
 const readline = require("readline-sync");
 
 var Row=6, Col=6;    //Row & Column
-
 var aryBox=[];    
 var aryVisited=[]   //Visited
 var StepRecord=[]   //Step Record
@@ -14,7 +13,6 @@ var StepRecord=[]   //Step Record
    for(i=0;i<6;i++){ 
        for(k=0;k<6;k++){
            
-
         for (let r = 0; r <Row; r++) {    //6 Rows / Value 0~5
             aryBox.push([]);
             aryVisited.push([]);
@@ -23,9 +21,11 @@ var StepRecord=[]   //Step Record
                 aryVisited[r][c]=0;
             }
         }
+
    var startR=i;
    var startC=k;
    var idx= aryBox[startR][startC].split(",");
+   
    aryVisited[startR][startC]=1;  //The Place That Walked Becomes 1
    console.log("Visit:"+ startR+", "+startC);
    var StepCount=0; //Step Count
